@@ -1,0 +1,129 @@
+*,
+*::after,
+*::before {
+    margin: 0;padding: 0;box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+:root {
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+    --hard-pink: rgb(191, 0, 255);
+}
+
+body {
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--light-pink);
+    background-size: 100%;
+    background-position: top;
+
+    font-family: 'Work Sans', sans-serif;
+    height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    color: var(--dark-purple);
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+
+.container {
+    padding: 5rem;
+    background-color: #fff;
+    width: 63rem;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, .1);
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.list__item {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.list__item:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+
+.heading-primary {
+    font-size: 5.5rem;
+}
+
+.heading-secondary{
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    cursor: pointer;
+}
+
+.heading-secondary:hover {
+    color: var(--hard-pink);
+}
+
+.paragraph {
+    color: var(--grayish-purple);
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+
+.img {
+    display: inline-block;
+}
+
+.d-none {
+    display: none;
+}
+
+@media only screen and (max-width: 43.75em) {
+    html {
+        font-size: 50%;
+    }
+
+    body {
+        background-size: auto;
+    }
+
+    .container {
+        width: 43rem;
+    }
+}
+
+@media only screen and (max-width: 31.25em) {
+    html {
+        font-size: 45%;
+    }
+
+    .container {
+        width: 35rem;
+    }
+}
